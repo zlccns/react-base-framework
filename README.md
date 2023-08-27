@@ -43,4 +43,4 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 ### 参考文档
 
 * React [@see](https://zh-hans.react.dev/)
-* Create React App 脚手架 [@see](https://zh-hans.react.dev)
+* Create React App 脚手架 [@see](https://cra.docschina.org)
