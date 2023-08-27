@@ -10,7 +10,14 @@
     "=========== 配置检查 ===========": "",
     "test": "react-scripts test",
     "=========== 提取Webpack配置文件 ===========": "",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "=========== 自定义命令(start) ===========": "",
+    "======================================== 每次执行 yarn 后，会造成 .husky 重复写入，下方命令做了去重复判断 ": "",
+    "add-commit-msg": "if ! grep -q 'yarn commitlint' .husky/commit-msg; then yarn husky add .husky/commit-msg 'yarn commitlint --edit \"$1\"'; fi",
+    "add-pre-commit": "if ! grep -q 'yarn lint-staged' .husky/pre-commit; then yarn husky add .husky/pre-commit 'yarn lint-staged'; fi",
+    "=========== 自动运行(钩子) ": "",
+    "prepare": "yarn run husky install && yarn run add-commit-msg | snazzy && yarn run add-pre-commit | snazzy",
+    "=========== 自定义命令(end) =============": ""
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
