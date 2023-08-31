@@ -60,7 +60,7 @@ module.exports = {
     sourceType: 'module',
     // 解析 JSX 语法
     ecmaFeatures: {
-      jsx: true,
+      jsx: true
     },
 
     // 允许使用 ESLint 校验所有 babel code
