@@ -91,6 +91,11 @@ module.exports = {
     // 不能有声明后未被使用的变量或参数，production ? 关闭功能 : 直接报错
     'no-unused-vars': process.env.VUE_APP_ESLINT === 'local' ? 'off' : 'error',
 
+    // 禁用使用 JSX 必须导入 React 的限制
+    // @see https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
+
     // 禁止在结尾处添加逗号
     // @see https://cn.eslint.org/docs/rules/comma-dangle#options
     // 'comma-dangle': 'off',
