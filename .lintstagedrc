@@ -1,0 +1,4 @@
+# lint-staged 配置项
+{
+    "./src/**/*.{js,jsx,ts,tsx,vue,less,sass,scss,css.json}": ["prettier --write"],
+}

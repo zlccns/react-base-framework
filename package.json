@@ -2,26 +2,47 @@
   "name": "react-base-framework",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
   "scripts": {
+    "=========== 启动命令 ===========": "",
     "start": "react-scripts start",
+    "=========== 打包命令 ===========": "",
     "build": "react-scripts build",
+    "=========== 配置检查 ===========": "",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "=========== 提取Webpack配置文件 ===========": "",
+    "eject": "react-scripts eject",
+    "=========== 自定义命令(start) ===========": "",
+    "======================================== 每次执行 yarn 后，会造成 .husky 重复写入，下方命令做了去重复判断 ": "",
+    "add-commit-msg": "if ! grep -q 'yarn commitlint' .husky/commit-msg; then yarn husky add .husky/commit-msg 'yarn commitlint --edit \"$1\"'; fi",
+    "add-pre-commit": "if ! grep -q 'yarn lint-staged' .husky/pre-commit; then yarn husky add .husky/pre-commit 'yarn lint-staged'; fi",
+    "=========== 自动运行(钩子) ": "",
+    "prepare": "yarn run husky install && yarn run add-commit-msg | snazzy && yarn run add-pre-commit | snazzy",
+    "=========== 自定义命令(end) =============": ""
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "dependencies": {
+    "@testing-library/jest-dom": "5.17.0",
+    "@testing-library/react": "13.4.0",
+    "@testing-library/user-event": "13.5.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "2.1.4"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "7.21.11",
+    "@commitlint/cli": "17.7.1",
+    "@commitlint/config-conventional": "17.7.0",
+    "eslint": "8.48.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-config-standard": "17.1.0",
+    "eslint-plugin-prettier": "5.0.0",
+    "eslint-plugin-react": "7.33.2",
+    "husky": "8.0.3",
+    "lint-staged": "14.0.1",
+    "prettier": "3.0.2",
+    "prettier-standard": "16.4.1",
+    "snazzy": "9.0.0",
+    "standard": "17.1.0"
   },
   "browserslist": {
     "production": [
